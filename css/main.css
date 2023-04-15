@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+header{
+    /*background-color:rgb(250, 248, 244);*/
+    /* width (ancho) y height (altura) */
+    width: 100%; /*ancho del encabezado TODO*/
+    height: 60px;
+}
+header nav{
+    /* alterar dimensiones y llenar el espacio disponible de acuerdo a su capacidad*/
+   display: flex;
+   /*mover al final (o sea del lado derecho*/
+   justify-content: flex-end; 
+}
+/*En la clase*/
+header nav .nav-right-section{
+width: 300px; /*ancho de la lista*/
+height: auto;
+display: flex; /*Distribuir */
+list-style: none;  /*Quitar los puntos*/
+justify-content: center; /*centrar de acuerdo al nav*/
+align-items: center;   /*centrar x2*/
+
+}
+/*anclas*/
+a{
+text-decoration: none;
+cursor: pointer;
+}
+/*Entrar a as anclas del nav*/
+nav .nav-right-section a{
+margin-right: 25px;
+color: rgb(102, 102, 102);
+}
+/* navegacion , menu en la lista, el icono de los circulos*/
+nav .nav-right-section .menu{
+/*llamar imagen con css*/
+background-image: url('https://img.icons8.com/ios-glyphs/90/000000/circled-menu.png');
+width: 30px;
+height: 30px;
+background-size: contain;
+}
+nav .nav-right-section .imagenperfil{
+    margin-right: 0px;
+    border-radius: 50%;
+    background-size: contain;
+    width: 40px;
+    padding: 0 20;
+    align-items: end;
+}
+/*MAIN*/
+main{
+    margin-top: 50px;
+   /* background-color: pink;*/
+    text-align: center;
+}
+/*Section logo*/
+main .main-logo{
+   /* background-color: black;*/
+    width: 530px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+/*logo google*/
+main .main-logo img{
+    width: 310px;
+    height: 110px;
+}
+/*Section input*/
+main .main-input{
+    /*background-color: blueviolet; */
+    width: 530px;
+    margin: 0 auto; /*margenes fuera*/
+    margin-bottom: 35px;
+}
+/**/
+main .main-input-container{
+    /*Para dibujar el borde  falso del buscador de google*/
+     width: 500px;
+     border-radius: 80px; /****INVESTIGAR****/
+     border: 0.3px solid #dfe1e5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+main .main-input input{
+    border: none;
+    width: 550px;
+    height: 40px;
+    outline: none;
+}
+main .main-input-container:hover{
+    box-shadow: 0px 1px 6px 1px #20212447; /*Agregar sombra al sleccionar o pasar l cursor*/
+    border-color: #dfe1e500;
+}
+main .main-input .search-icon{
+    background-image: url('https://seekicon.com/free-icon-download/search_20.svg');
+   /* background-position: center;*/
+    /*background-size: contain;*/
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 14px;
+    width: 14px;
+    padding-left: 6%;
+}
+main .main-input .micro-icon{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png');
+    height: 17px;
+    width: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor:pointer;
+    padding-left: 1%;
+}
+main .main-input .cam-icon{
+background-image: url('https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg');
+width: 16px;
+height: 16px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+padding-left: 7%;
+}
+main .main-buttons{
+width: 550px;
+height: 300px;
+margin: 0 auto;
+}
+main .main-buttons div{
+    display: inline-block; /*Poner en la misma linea ambos botones*/
+}
+main .main-buttons button{
+    border: none; /*Ningun borde a los botones*/
+    height: 36px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #3c4043;
+    border-radius: 4px; /*Redondear*/
+    padding: 0 15px;
+    margin-right: 15px;
+    border: 1px solid #f8f9fa;
+}
+/* efecto hover cuando interactua con un señalador sin activarlo a un
+o sea que hace cuando le pones el mouse*/
+main .main-buttons button:hover{
+   box-shadow: 0 1px 1px rgba(0,0,0,1);
+   /* background-color: #f8f9fa;
+   */
+/*borde de 1 px, con margen solido y de color */
+    border: 1px solid #dadce0;
+    /*color del hover*/
+    color: #202124;
+    /*Poner la manita*/
+    cursor: pointer;
+}
+
+/*Ejercicio terminar los 2 botones*/
+
+/*footer*/
+/*seccion*/
+footer{
+background-color: #f2f2f2;
+width: 100%;
+height: 50px;
+position: absolute; /*para no alterar del todo la pagina*/
+font-size: 13px;
+border-top: 1px solid #e4e4e4; /*borde de arriba*/
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+bottom:0;
+}
+
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+}
+
+footer .footer-left{
+    justify-self: left;
+}
+
+footer .footer-right{
+    justify-self: right;
+}
+/*para editar los elementos que estan dentro de foooter, 
+en la lista, los items  para a*/
+footer ul li a{
+color: #70757a;
+margin: 10px;
+}
